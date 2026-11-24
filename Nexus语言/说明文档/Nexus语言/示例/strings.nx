@@ -1,0 +1,9 @@
+; 字符串：切分、连接、切片、去空白
+(letv s "  alpha,beta,gamma  ")
+(letv parts (split (trim s) ","))
+(rec "parts" parts
+     "joined" (join parts "|")
+     "first" (get parts 0)
+     "slice" (slice (trim s) 0 5)
+     "upper" (upper "nexus")
+     "contains" (contains s "beta"))
