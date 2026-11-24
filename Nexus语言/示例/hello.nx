@@ -1,3 +1,0 @@
-; 最简示例：打印并返回一个记录
-(print "Hello, Nexus!")
-(rec "language" "Nexus" "version" "1.1.0")
