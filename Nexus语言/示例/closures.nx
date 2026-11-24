@@ -1,0 +1,7 @@
+; 闭包：返回一个捕获了 n 的函数
+(node make-adder (n)
+  (node adder (x) (+ x n))
+  adder)
+(node add5 (make-adder 5))
+(node add100 (make-adder 100))
+(rec "add5" (add5 10) "add100" (add100 1))
