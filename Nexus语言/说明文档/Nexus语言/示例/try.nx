@@ -1,5 +1,0 @@
-; 错误处理：try 返回 {ok, value/kind, line}
-(rec "ok" (try (+ 1 2))
-     "divide" (try (/ 1 0))
-     "bad_type" (try (+ 1 "a"))
-     "divide_kind" (get (try (/ 1 0)) "kind"))

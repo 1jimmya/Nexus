@@ -1,8 +1,0 @@
-; 记录：新增/修改字段、深层取值
-(letv base (rec "id" 1 "name" "buoy" "battery" 80))
-(letv updated (assoc base "battery" 75))
-(letv extended (assoc updated "status" "online"))
-(rec "base" base
-     "updated" updated
-     "extended" extended
-     "nested" (get (rec "a" (rec "b" 2)) "a"))
