@@ -1,0 +1,38 @@
+; 首页：Nexus 浏览器的内置页面（本文件本身就是一份 Nexus 程序）
+(rec "title" "Nexus 浏览器"
+     "doc"
+     (rec "type" "page"
+          "children"
+          [(rec "type" "heading" "level" 1 "text" "Nexus 浏览器")
+           (rec "type" "text" "text" "这是一个用 Nexus 语言驱动的原生浏览器：窗口上方有地址栏和前进/后退/刷新/首页，页面不是 HTML，而是返回文档树记录的 .nx 程序。")
+           (rec "type" "row" "children"
+                [(rec "type" "badge" "text" "Nexus 1.1.0" "tone" "ok")
+                 (rec "type" "badge" "text" "C 引擎" "tone" "info")
+                 (rec "type" "badge" "text" "原生窗口" "tone" "dim")])
+           (rec "type" "spacer" "size" 8)
+           (rec "type" "card" "title" "快速开始"
+                "children"
+                [(rec "type" "text" "text" "地址栏支持 nexus://home、nexus://语法示例，也可以直接填 .nx 文件路径。")
+                 (rec "type" "list" "items"
+                      ["输入 nexus://语法示例 查看语言速览"
+                       "修改 浏览器/页面 下的 .nx 页面并刷新"
+                       "页面里的 action / goto 按钮由浏览器接收"])
+                 (rec "type" "row" "children"
+                      [(rec "type" "button" "text" "打开语法示例" "action" "goto:nexus://语法示例")
+                       (rec "type" "button" "text" "刷新本页" "action" "refresh")])])
+           (rec "type" "card" "title" "页面文档树支持的节点"
+                "children"
+                [(rec "type" "table"
+                      "headers" ["节点" "用途"]
+                      "rows" [["heading" "标题 1~3 级"]
+                              ["text" "正文，支持 dim/ok/warn/bad 色调"]
+                              ["card" "卡片容器"]
+                              ["row" "横向排列"]
+                              ["kv" "键值表"]
+                              ["table" "表格"]
+                              ["list" "项目列表"]
+                              ["badge" "徽章"]
+                              ["button" "按钮"]
+                              ["code" "代码块"]])])
+           (rec "type" "divider")
+           (rec "type" "text" "text" "页面由 浏览器/页面/首页.nx 渲染；修改它并点刷新即可看到变化。" "tone" "dim")]))

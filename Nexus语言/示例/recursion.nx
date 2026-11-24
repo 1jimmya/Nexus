@@ -1,0 +1,8 @@
+; 递归：阶乘与斐波那契
+(node fact (n)
+  (cond (== n 0) (then (hand 1)))
+  (hand (* n (fact (- n 1)))))
+(node fib (n)
+  (cond (< n 2) (then (hand n)))
+  (hand (+ (fib (- n 1)) (fib (- n 2)))))
+(rec "fact10" (fact 10) "fib10" (fib 10))
